@@ -19,11 +19,6 @@ mongoose.connect(process.env.MONGO_URI)
 // Rutas principales
 app.use('/contactos', rutasContactos);
 
-// Ruta raíz
-app.get('/', (req, res) => {
-  res.send('📱 Bienvenida a tu mini agenda de contactos');
-});
-
 // Arranque del servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
